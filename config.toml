@@ -1,20 +1,20 @@
 # Main config file for icon theme.
 theme = "hugo-icon"
-baseURL = "https://www.example.com/"
+baseURL = "https://musale.github.io/ternion"
 languageCode = "en-AU"
-title = "My Awesome Title"
+title = "Ternion Designs"
 publishDir = "docs"
 
 # Metadata
 [params]
-  author = "Your name"
-  description = "Cool description"
+  author = "Ternion Designs"
+  description = "Building the future"
 
 # Hero section (from here on is for icon theme)
 [params.hero]
   img = "images/hero_bg.jpg"
-  title = "Create awesome things for better web"
-  description = "Lovingly hand-crafted by the fine folks at [FreeHTML5.co](http://freehtml5.co/)"
+  title = "Create awesome things for the future"
+  description = "Lovingly hand-crafted by the fine folks at [Ternion Designs](https://terniondesigns.com/)"
 
 # Navigation section
 [params.nav]
