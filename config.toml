@@ -3,6 +3,7 @@ theme = "hugo-icon"
 baseURL = "https://www.example.com/"
 languageCode = "en-AU"
 title = "My Awesome Title"
+publishDir = "docs"
 
 # Metadata
 [params]
