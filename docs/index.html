@@ -485,44 +485,79 @@
     <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
       
       <h2>Get In Touch</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident.</p>
+      <p>We&rsquo;ll get back as soon as possible.</p>
       
     </div>
-    <form name="contact-form" netlify-honeypot="_gotcha" action="thank-you" netlify>
+    <form
+      name="contact-form"
+      netlify-honeypot="_gotcha"
+      action="thank-you"
+      netlify
+    >
       <div class="row">
-	<div class="col-md-6">
-	  <div class="form-group">
-	    
-		  
-	    <input type="text" class="form-control" id="inputName" placeholder="Your name" name="_name">
-		  
-	  </div>
-	</div>
-	<div class="col-md-6">
-	  <div class="form-group">
-			
-	    <input type="email" class="form-control" id="inputEmail" placeholder="Your email" name="_replyto" required>
-	    <small id="emailHelp" class="form-text text-muted">We&#39;ll never share your email with anyone else.</small>
-		  
-	  </div>
-	</div>
-	<div class="col-md-12">
-	  <div class="form-group">
-		  
-	    <textarea class="form-control" id="inputBody" cols="30" rows="7" placeholder="Please enter a message." name="message"></textarea>
-		  
-	  </div>
-	</div>
-	<div class="col-md-12">
-	  <div class="form-group">
-	    <input type="hidden" name="_subject" value="New website query">
-	    <input type="text" name="_gotcha" style="display:none">
-	    <button type="submit" class="btn btn-primary btn-outline" value="Send">Submit</button>
-	    
-	  </div>
-	</div>
+        <div class="col-md-6">
+          <div class="form-group">
+            
+            <input
+              type="text"
+              class="form-control"
+              id="inputName"
+              placeholder="Your name"
+              name="_name"
+            />
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail"
+              placeholder="Your email"
+              name="_replyto"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.
+            </small>
+            
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            
+            <textarea
+              class="form-control"
+              id="inputBody"
+              cols="30"
+              rows="7"
+              placeholder="Please enter a message."
+              name="message"
+            ></textarea>
+            
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="hidden" name="_subject" value="New website query" />
+            <input type="text" name="_gotcha" style="display:none" />
+            <button
+              type="submit"
+              class="btn btn-primary btn-outline"
+              value="Send"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
-
     </form>
   </div>
 </div>
