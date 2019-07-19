@@ -222,10 +222,5 @@ publishDir = "docs"
 # Note here that the copyright and attribution statement must remain as part of the license agreement. If you wish to remove this, please contact freehtml5 and pay for a professional license.
 [params.footer]
   enable = true
-  note = "<p><small>&copy; 2016 Free HTML5 Template. All Rights Reserved. <br> Designed by <a href='http://freehtml5.co/' target='_blank'>FreeHTML5.co</a> Demo Images: <a href='http://pexels.com/' target='_blank'>Pexels</a><br>Hugo port by <a href='https://github.com/SteveLane/' target='_blank'>SteveLane</a></small></p>"
-  github = "#"
-  twitter = "#"
-  facebook = "#"
-  vine = "#"
-  linkedin = "#"
-  instagram = "#"
+  note = "<p><small>&copy; 2019 Ternion Designs Ltd. All Rights Reserved. <br> Designed by <a href='https://terniondesigns.com' target='_blank'>Ternion Designs</a></small></p>"
+  github = "https://github.com/musale/ternion"
