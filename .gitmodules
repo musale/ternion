@@ -1,3 +1,6 @@
 [submodule "themes/hugo-icon"]
 	path = themes/hugo-icon
 	url = https://github.com/SteveLane/hugo-icon.git
+[submodule "themes/somrat"]
+	path = themes/somrat
+	url = https://github.com/musale/somrat.git
