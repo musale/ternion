@@ -1,14 +1,14 @@
 ---
-title : "I'm Somrat Sorkar"
+title : "Ternion Designs Ltd"
 # full screen navigation
-first_name : "MacGyver"
-last_name : "SOMRAT"
+first_name : "TERNION"
+last_name : "designs"
 bg_image : "images/backgrounds/full-nav-bg.jpg"
 # animated text loop
 occupations:
-- "Web Developer"
-- "Graphic Designer"
-- "Database Manager"
+- "Environmental Experts"
+- "Planning & Design"
+- "Web & Information Systems Development"
 
 # slider background image loop
 slider_images:
@@ -19,7 +19,7 @@ slider_images:
 # button
 button:
   enable : true
-  label : "HIRE ME"
+  label : "TALK TO US"
   link : "#contact"
 
 
