@@ -1,226 +1,216 @@
 # Main config file for icon theme.
-theme = "hugo-icon"
 baseURL = "https://wizardly-goldberg-6fd189.netlify.com"
+theme = "somrat"
 languageCode = "en-AU"
 title = "Ternion Designs"
 publishDir = "docs"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "10"
+# disable language
+disableLanguages = [] # disable language from here
+# google analutics
+googleAnalytics = "" # example : UA-123-45
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
 
-# Metadata
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML"]
+
+[markup.goldmark.renderer]
+unsafe= true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap"
+[[params.plugins.css]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+[[params.plugins.css]]
+link = "plugins/hover/hover.css"
+[[params.plugins.css]]
+link = "plugins/magnific-popup/magnific-popup.css"
+[[params.plugins.css]]
+link = "plugins/owl-carousel/owl.carousel.min.css"
+[[params.plugins.css]]
+link = "plugins/owl-carousel/owl.theme.default.min.css"
+[[params.plugins.css]]
+link = "plugins/text-animation/text-animation.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/wow.min.js"
+[[params.plugins.js]]
+link = "plugins/text-animation/text-animation.js"
+[[params.plugins.js]]
+link = "plugins/jquery.waypoints.min.js"
+[[params.plugins.js]]
+link = "plugins/shuffle/shuffle.min.js"
+[[params.plugins.js]]
+link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
+[[params.plugins.js]]
+link = "plugins/owl-carousel/owl.carousel.min.js"
+
+
+#################### default parameters ################################
 [params]
-  author = "Ternion Designs"
-  description = "Building the future"
+favicon = "images/favicon.png"
+logo_light = "images/logo.png"
+logo_dark = "images/logo-dark.png"
+logo_width = "150px"
+# Meta data
+description = "This is meta description"
+author = "somrat"
 
-# Hero section (from here on is for icon theme)
-[params.hero]
-  img = "images/hero_bg.jpg"
-  title = "Create awesome things for the future"
-  description = "Lovingly hand-crafted by the fine folks at [Ternion Designs](https://terniondesigns.com/)"
+# Preloader
+[params.preloader]
+enable = true
+preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
+  
+############################# social site ########################
+[[params.social]]
+icon = "fab fa-facebook-f"
+link = "https://www.facebook.com/somratpro"
 
-# Navigation section
-[params.nav]
-  mission = "Our Mission"
-  services = "Services"
-  team = "The Team"
-  contact = "Get In Touch"
-  # Include logo instead if HOME:
-  # logo = "path/to/logo"
+[[params.social]]
+icon = "fab fa-twitter"
+link = "https://twitter.com/somratpro"
 
-# Mission section
-[params.mission]
-  enable = true
+[[params.social]]
+icon = "fab fa-instagram"
+link = "https://www.instagram.com/somratpro"
 
-  [params.mission.images]
-    enable = true
+[[params.social]]
+icon = "fab fa-github"
+link = "https://github.com/somratpro"
 
-    [[params.mission.images.list]]
-      img = "images/img_3.jpg"
-    [[params.mission.images.list]]
-      img = "images/img_2.jpg"
-    [[params.mission.images.list]]
-      img = "images/img_1.jpg"
-    [[params.mission.images.list]]
-      img = "images/img_4.jpg"
+[[params.social]]
+icon = "fab fa-linkedin"
+link = "https://www.linkedin.com/in/somratpro"
 
-  [[params.mission.item]]
-    weight = 1
-    name = "marketing"
-    title = "Marketing"
-    subtitle = "Lorem ipsum dolor sit amet. Ratione voluptate laborum sapiente officiis molestiaea."
-    description = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid aperiam eveniet officia molestiae temporibus beatae dolores dignissimos aspernatur eius doloremque ad, eaque pariatur, repellendus illum, nostrum velit necessitatibus molestias.</p><ul class='checked'><li>Web Development</li><li>User Interface Experts</li><li>Pixel Perfect Design</li></ul><p><a href='#' class='btn btn-primary btn-outline fh5co-content-nav' data-nav-section='contact'>Get In Touch</a></p>"
 
-  [[params.mission.item]]
-    weight = 2
-    name = "analysis"
-    title = "Resources"
-    subtitle = "Quam quasi illum expedita dicta nemo fugit reprehenderit similique! Corporis praesentium magnam sequi."
-    description = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla explicabo, molestiae eaque fugiat dolores est esse, doloremque placeat assumenda corrupti officia dolorum. Sunt saepe ut, explicabo consectetur, nostrum illo est.</p><ul class='checked'><li>Free HTML5 Templates</li><li>Free Bootstrap Templates</li><li>Free HTML5 Bootstrap Templates</li></ul><p><a href='#' class='btn btn-primary btn-outline fh5co-content-nav' data-nav-section='contact'>Get In Touch</a></p>"
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+home = "Home"
+# copyright
+copyright = "Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)"
 
-  [[params.mission.item]]
-    weight = 3
-    name = "strategy"
-    title = "Strategy"
-    subtitle = "Magnam iste obcaecati illo laboriosam amet. Dignissimos sed quis voluptatum corporis adipisci amet."
-    description = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore illum expedita placeat debitis, dignissimos obcaecati et modi. Possimus id dicta consequuntur veritatis, reiciendis at expedita voluptate sint distinctio eligendi!</p><ul class='checked'><li>Web Development</li><li>User Interface Experts</li><li>Pixel Perfect Design</li></ul><p><a href='#' class='btn btn-primary btn-outline fh5co-content-nav' data-nav-section='contact'>Get In Touch</a></p>"
 
-# Services section
-[params.services]
-  enable = true
-  video = true
-  vidlink = "https://vimeo.com/channels/staffpicks/93951774"
-  title = "Our Services"
-  description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+################# english navigation ##################
 
-  [[params.services.item]]
-    icon = "icon-present"
-    title = "Web Development"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+# main menu
+[[Languages.en.menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 
-  [[params.services.item]]
-    icon = "icon-eye"
-    title = "Retina Ready"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+[[Languages.en.menu.main]]
+name = "About me"
+pre = "#"
+url = "about"
+weight = 2
 
-  [[params.services.item]]
-    icon = "icon-paper-plane"
-    title = "Light Speed"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+[[Languages.en.menu.main]]
+name = "Service"
+pre = "#"
+url = "service"
+weight = 3
 
-  [[params.services.item]]
-    icon = "icon-pencil"
-    title = "Copyrighting"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+[[Languages.en.menu.main]]
+name = "Portfolio"
+pre = "#"
+url = "portfolio"
+weight = 4
 
-  [[params.services.item]]
-    icon = "icon-rocket"
-    title = "Load Fast"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+[[Languages.en.menu.main]]
+name = "Testimonial"
+pre = "#"
+url = "testimonial"
+weight = 5
 
-  [[params.services.item]]
-    icon = "icon-support"
-    title = "Customer Support"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+[[Languages.en.menu.main]]
+name = "Contact"
+pre = "#"
+url = "contact"
+weight = 6
 
-# Work section
-[params.work]
-  enable = true
+[[Languages.en.menu.main]]
+name = "Blog"
+url = "blog"
+weight = 7
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_1.jpg"
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_2.jpg"
+################################### French language #####################################
+[Languages.fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+contentDir = "content/french"
+weight = 2
+home = "Accueil"
+# copyright
+copyright = "Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)"
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_3.jpg"
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_2.jpg"
+################# english navigation ##################
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_3.jpg"
+# main menu
+[[Languages.fr.menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_2.jpg"
+[[Languages.fr.menu.main]]
+name = "About me"
+pre = "#"
+url = "about"
+weight = 2
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_3.jpg"
+[[Languages.fr.menu.main]]
+name = "Service"
+pre = "#"
+url = "service"
+weight = 3
 
-  [[params.work.item]]
-    title = "Consectetur adipisicing"
-    subtitle = "Web Design"
-    img = "images/img_4.jpg"
+[[Languages.fr.menu.main]]
+name = "Portfolio"
+pre = "#"
+url = "portfolio"
+weight = 4
 
-# Team section
-[params.team]
-  enable = true
-  title = "Meet The Team"
-  description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+[[Languages.fr.menu.main]]
+name = "Testimonial"
+pre = "#"
+url = "testimonial"
+weight = 5
 
-  [[params.team.item]]
-    name = "Jean Doe"
-    position = "Chief legend"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
-    img = "images/person1.jpg"
-    email = "#"
-    telephone = "#"
-    facebook = "#"
-    twitter = "#"
-    dribbble = "#"
-    instagram = "#"
-    github = "#"
-    linkedin = "#"
-    whatsapp = "#"
-
-  [[params.team.item]]
-    name = "Alice Doe"
-    position = "Chief overlord"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
-    img = "images/person2.jpg"
-    email = "#"
-    telephone = "#"
-    facebook = "#"
-    twitter = "#"
-    dribbble = "#"
-    instagram = "#"
-    github = "#"
-    whatsapp = "#"
-
-  [[params.team.item]]
-    name = "John Doe"
-    position = "Chief haranguer"
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
-    img = "images/person3.jpg"
-    email = "#"
-    telephone = "#"
-    facebook = "#"
-    twitter = "#"
-    dribbble = "#"
-    instagram = "#"
-    github = "#"
-    whatsapp = "#"
-
-  # [[params.team.item]]
-  #   name = "Jason Doe"
-  #   position = "Chief haranguer"
-  #   description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
-  #   img = "images/person3.jpg"
-  #   email = "#"
-  #   telephone = "#"
-  #   facebook = "#"
-  #   twitter = "#"
-  #   dribbble = "#"
-  #   instagram = "#"
-  #   github = "#"
-  #   whatsapp = "#"
-
-# Contact section
-[params.contact]
-  enable = true
-  title = "Get In Touch"
-  message = "We'll get back as soon as possible."
-  name_placeholder = "Your name"
-  email_placeholder = "Your email"
-  email_disclaimer = "We'll never share your email with anyone else."
-  message_placeholder = "Please enter a message."
-  button_text = "Submit"
-
-# Footer section
-# Note here that the copyright and attribution statement must remain as part of the license agreement. If you wish to remove this, please contact freehtml5 and pay for a professional license.
-[params.footer]
-  enable = true
-  note = "<p><small>&copy; 2019 Ternion Designs Ltd. All Rights Reserved. <br> Designed by <a href='https://terniondesigns.com' target='_blank'>Ternion Designs</a></small></p>"
-  github = "https://github.com/musale/ternion"
+[[Languages.fr.menu.main]]
+name = "Contact"
+pre = "#"
+url = "contact"
+weight = 6
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
