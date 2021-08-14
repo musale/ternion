@@ -107,7 +107,7 @@ contentDir = "content/english"
 weight = 1
 home = "Home"
 # copyright
-copyright = "Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)"
+copyright = "Copyright &copy; 2021 <br>Built with ❤️️ by the awesome people at [Ternion Designs](https://www.terniondesigns.com)"
 
 
 ################# english navigation ##################

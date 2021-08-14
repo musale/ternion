@@ -3,7 +3,7 @@ title : "Ternion Designs Ltd"
 # full screen navigation
 first_name : "TERNION"
 last_name : "designs"
-bg_image : "images/backgrounds/full-nav-bg.jpg"
+bg_image : "images/backgrounds/full-nav-bg.jpeg"
 # animated text loop
 occupations:
 - "Environmental Consultancy Experts"
