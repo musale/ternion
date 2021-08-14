@@ -6,7 +6,7 @@ last_name : "designs"
 bg_image : "images/backgrounds/full-nav-bg.jpg"
 # animated text loop
 occupations:
-- "Environmental Experts"
+- "Environmental Consultancy Experts"
 - "Planning & Design"
 - "Web & Information Systems Development"
 

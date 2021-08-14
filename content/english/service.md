@@ -1,6 +1,11 @@
 ---
 title : "SERVICES"
 service_list:
+
+# service item loop
+- name : "Enviromental Consultancy"
+  image : "images/icons/environment.png"
+
 # service item loop
 - name : "Web Development"
   image : "images/icons/web-development.png"
@@ -8,11 +13,12 @@ service_list:
 # service item loop
 - name : "Graphic Design"
   image : "images/icons/graphic-design.png"
-  
+
+
 # service item loop
-- name : "Database Management"
-  image : "images/icons/dbms.png"
-  
+- name : "Planning & Design"
+  image : "images/icons/planning.png"
+
 # service item loop
 - name : "Software Development"
   image : "images/icons/software-development.png"
