@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ternion Designs Ltd - Your partner in construction, environmental compliance, and technology solutions">
+    <title>Ternion Designs Ltd</title>
+    <link rel="icon" type="image/jpeg" href="static/images/logo.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --primary-color: #023373;
+            --secondary-color: #A463BF;
+            --accent-color: #E9A7F2;
+            --dark-accent: #732C02;
+            --text-color: #404040;
+            --light-bg: rgba(233, 167, 242, 0.05);
+            --gradient-primary: linear-gradient(135deg, #023373 0%, #A463BF 100%);
+            --gradient-secondary: linear-gradient(135deg, #A463BF 0%, #E9A7F2 100%);
+            --gradient-accent: linear-gradient(135deg, #732C02 0%, #023373 100%);
+            --gradient-overlay: linear-gradient(to bottom, rgba(2, 51, 114, 0.9), rgba(163, 99, 191, 0.8));
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 20px rgba(2, 51, 114, 0.15);
+            --card-shadow: 0 10px 30px -10px rgba(2, 51, 114, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Remove preloader styles */
+        .preloader {
+            display: none;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--gradient-primary);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(2, 51, 114, 0.85), rgba(163, 99, 191, 0.85)), url('static/images/slider/slider-1.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var (--gradient-secondary);
+            margin: 1rem auto;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, #fff 0%, var(--light-bg) 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: var(--card-shadow);
+            border-left: 4px solid transparent;
+            border-image: var(--gradient-secondary);
+            border-image-slice: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-image: var(--gradient-primary);
+            border-image-slice: 1;
+            box-shadow: var(--shadow);
+        }
+
+        .service-card img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .service-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 16/9;
+            background: var(--light-bg);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-overlay);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover::before {
+            opacity: 1;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(145deg, var(--light-bg) 0%, rgba(2, 51, 114, 0.05) 100%);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, #fff 0%, var(--light-bg) 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            border-top: 3px solid transparent;
+            border-image: var (--gradient-secondary);
+            border-image-slice: 1;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            border-image: var(--gradient-primary);
+            border-image-slice: 1;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 33.333%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                max-width: 100%;
+            }
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            font-family: inherit;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-top: 0.5rem;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(233, 167, 242, 0.1);
+        }
+
+        .contact-info p {
+            margin-bottom: 0.75rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Call to Action Button Styles */
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-secondary);
+            background-size: 200% auto;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 1rem 0;
+        }
+
+        .cta-button:hover {
+            background: var(--gradient-primary);
+            background-size: 200% auto;
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(2, 51, 114, 0.2);
+        }
+
+        .hero .cta-button {
+            margin-top: 2rem;
+        }
+
+        .service-card .cta-button {
+            margin-top: auto;
+            align-self: center;
+        }
+
+        .contact-section {
+            background: linear-gradient(rgba(2, 51, 114, 0.95), rgba(163, 99, 191, 0.9)), url('static/images/backgrounds/contact-us-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="static/images/logo.jpeg" alt="Ternion Designs Logo" height="40">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero" data-aos="fade">
+        <div class="container">
+            <h1>Welcome to Ternion Designs Ltd</h1>
+            <p>Your partner in construction, environmental compliance, and technology solutions</p>
+            <p class="hero-subtitle">We deliver the highest standards and processes through our comprehensive services, ensuring excellence in everything we do.</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <section id="services" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="static/images/icons/planning.png" alt="Construction Planning">
+                    <h3>Construction</h3>
+                    <p>We help people plan and design buildings, providing detailed renders and overseeing construction with our team of contractors. Our services include:</p>
+                    <ul class="service-list">
+                        <li>Building planning and design</li>
+                        <li>Detailed architectural renders</li>
+                        <li>Construction oversight</li>
+                        <li>Interior design services</li>
+                        <li>Building renovations</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Discuss Your Project</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="static/images/icons/environment.png" alt="Environmental Services">
+                    <h3>Environmental Compliance</h3>
+                    <p>We assist companies in meeting Kenya's environmental laws through comprehensive compliance solutions:</p>
+                    <ul class="service-list">
+                        <li>Environmental tests and research</li>
+                        <li>Compliance management plans</li>
+                        <li>Regulatory training programs</li>
+                        <li>Real-time monitoring systems</li>
+                        <li>Detailed compliance reporting</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Get Compliant</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="static/images/icons/web-development.png" alt="Technology Services">
+                    <h3>Technology</h3>
+                    <p>We build custom technology solutions that drive business success:</p>
+                    <ul class="service-list">
+                        <li>Custom web applications</li>
+                        <li>Requirements analysis</li>
+                        <li>Solution architecture</li>
+                        <li>Development and testing</li>
+                        <li>Ongoing maintenance and support</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Start Development</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container" data-aos="fade-up">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>Founded in 2016 by three experts in environmental compliance, construction, and technology, Ternion Designs Ltd. was inspired by a desire to revolutionize industry processes and meet international standards.</p>
+            <p><strong>Mission:</strong> To deliver the highest standards and processes through our comprehensive services, ensuring excellence in construction, environmental compliance, and technology solutions.</p>
+            <p><strong>Vision:</strong> To be a global standard in construction and technology services.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="static/images/portfolio/item1.jpg" alt="Modern Residential Building">
+                    <h3>Modern Residential Building</h3>
+                    <p>A state-of-the-art residential building featuring innovative design and sustainable materials.</p>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="static/images/portfolio/item2.jpg" alt="Corporate Office Complex">
+                    <h3>Corporate Office Complex</h3>
+                    <p>A high-tech office complex designed to enhance productivity and environmental sustainability.</p>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="static/images/portfolio/item3.jpg" alt="Custom Web Application">
+                    <h3>Custom Web Application</h3>
+                    <p>A bespoke web application developed for a retail business to streamline operations and improve customer engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Client Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="static/images/clients/client1.jpg" alt="Client" class="client-image">
+                    <p>"Ternion Designs Ltd. transformed our business with their innovative solutions."</p>
+                    <footer>— Happy Client</footer>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="static/images/clients/client2.jpg" alt="Client" class="client-image">
+                    <p>"Their attention to detail and commitment to quality is unmatched."</p>
+                    <footer>— Satisfied Customer</footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-form">
+                <div class="contact-info" style="text-align: center; margin-bottom: 2rem;">
+                    <p>Email: info@terniondesigns.com</p>
+                    <p>Phone: +254 700 000 000</p>
+                    <p>Address: Nairobi, Kenya</p>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="static/images/logo.jpeg" alt="Ternion Designs Logo" height="30">
+            <p>&copy; 2025 Ternion Designs Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
